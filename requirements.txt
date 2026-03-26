@@ -2,3 +2,4 @@ streamlit
 pillow
 google-genai
 inference-sdk
+opencv-python-headless
