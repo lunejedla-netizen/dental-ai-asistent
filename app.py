@@ -19,27 +19,7 @@ PREKLAD_DENTAL = {
 }
 
 
-def check_password():
-    """Vrátí True, pokud uživatel zadal správné heslo."""
-    if st.session_state.get("password_correct", False):
-        return True
 
-    st.markdown("### 🔒 Přístup pouze pro povolané zubaře")
-    heslo = st.text_input("Zadej tajné heslo:", type="password")
-    
-    # Zde nastav heslo, které pošleš ségře (např. na WhatsAppu)
-    if heslo == "hovnokleslo": 
-        st.session_state["password_correct"] = True
-        st.rerun()
-    elif heslo:
-        st.error("Nesprávné heslo. Zkus to znovu.")
-    return False
-
-# Zastaví běh celé aplikace, dokud není heslo správné
-if not check_password():
-    st.stop()
-# --- 1. KONFIGURACE A DESIGN (Dark Mode Sage) ---
-st.set_page_config(page_title="Dental Vision ✧ Master", layout="wide")
 
 st.markdown("""
     <style>
